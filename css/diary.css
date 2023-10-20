@@ -1,0 +1,157 @@
+html,
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.diary-container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 72vw;
+    top: 12%;
+    left: 8%;
+    height: 60vh;
+    border: 0;
+    background-image: url(../images/diary-box.png);
+    border-radius: 10px;
+    padding: 5%;
+
+
+}
+textarea{
+    margin: 0;
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+    /* background-image: url(../images/diary-box.png); */
+    outline: none;
+    border: 0;
+}
+.emoji{
+    /* position: absolute; */
+    background-image: url(../images/soso-emoji.png);
+    width: 20%;
+    height: 10%;
+    background-size: cover;
+}
+hr{
+    width: 70vw;
+    margin: 10% 0;
+}
+.upload{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 10%;
+    position: absolute;
+    /* bottom: 14%; */
+    top: 80%;
+    width: 80vw;
+    height: 60px;
+    font-size: 1rem;
+    border: 0;
+    border-radius: 5px;
+    background-color:  var(--main-color);
+    color: white;
+}
+
+/* 팝업 스타일 */
+/* #emoji-checked,
+#category-checked,
+#closeButton {
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: lightblue;
+    border: 1px solid blue;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+#emoji-checked:hover,
+#category-checked:hover,
+#closeButton:hover {
+    background-color: lightcyan;
+} */
+.popup{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.727);
+    z-index: 99;
+    display: flex;
+    /* padding: 20%; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.emoji-container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 15%;
+    width: 90vw;
+    row-gap: 10px;
+}
+#emoji-checked1{
+    /* position:absolute; */
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-wrap: wrap;
+    left: 10%;
+    justify-content: center;
+    gap: 10%;
+    row-gap: 3vh;
+}
+img{
+    width: 80px;
+}
+.text{
+    color: white;
+    font-size: 1.1rem;
+    text-align: center;
+}
+.category-container{
+    margin-top: 35%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+#category-checked1{
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    row-gap: 20px;
+}
+.category-item{
+    width: 100px;
+    height: 38px;
+    border: 0;
+    border-radius: 20px;
+    font-size: 1rem;
+    /* font-weight: bold; */
+    color: white;
+}
+#lucid-dream{
+    background-color: #67BAE6;
+}
+#miscellaneous-dream{
+    background-color: #7C5DB3;
+}
+#nightmare{
+    background-color: #EAB24A;
+}
+#precognitive-dream{
+    background-color: #D05280;
+}
+#good-dream{
+    background-color: #94CDC2;
+}
