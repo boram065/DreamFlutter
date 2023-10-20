@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/calendar.css">
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
     <header>
@@ -16,9 +17,11 @@
             <!-- logo 이미지 추가 -->
             <!-- <a href="" class="nav-logo"></a> -->
 
-            <!-- 햄버거 메뉴바 -->
-            <div class="nav-toggle" id="nav_toggle">
-                <i class="bi bi-list"></i>
+            <!-- 이전 버튼 -->
+            <div class="nav-toggle">
+                <div class="pre" onclick="">
+                    <i class="bi bi-chevron-left"></i>
+                </div>
             </div>
         </nav>
     </header>
@@ -26,12 +29,14 @@
     <main>
         <div id="calendar">
             <div class="title flex-container">
-                <div class="left">
-                    <i class="bi bi-chevron-left"></i>
-                </div>
-                <div class="month"></div>
-                <div class="right">
-                    <i class="bi bi-chevron-right"></i>
+                <div class="top">
+                    <div class="left">
+                        <i class="bi bi-chevron-left"></i>
+                    </div>
+                    <div class="month"></div>
+                    <div class="right">
+                        <i class="bi bi-chevron-right"></i>
+                    </div>
                 </div>
             </div>
 
@@ -49,9 +54,58 @@
 
             <div class="dates container"></div>
         </div>
-    </main>
 
-    <!-- 수면에 도움이 되는 노래 추천 버튼을 누를 시 유튜브 링크로 이동 -->
+        <div class="song">
+            <div class="title">
+                <p>
+                    오늘의 수면제
+                    <div class="emoji">
+                        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Crying%20Face.png" alt="Crying Face" width="25" height="25" />
+                    </div>
+                </p>
+            </div>
+
+            <!-- 수면에 도움이 되는 노래 추천 버튼을 누를 시 유튜브 링크로 이동 -->
+            <div class="btn">
+                <button class="btnSong" onclick="">
+                    <div class="inside">
+                        <div class="songImg">
+                            <img src="/images/calendarImg.jpg">
+                        </div>
+
+                        <div class="content">
+                            <h5>누군가의 마음이 되면</h5>
+                            <p>예빛</p>
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <div class="alramContainer">
+            <div class="alram">
+                <div class="alramTitle">
+                    <h4>수면 알람</h4>
+                    <div class="plus">
+                        <i class="bi bi-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="time">
+                <div class="control">
+                    <h3></h3>
+                </div>
+
+                <fieldset>
+                    <label>
+                        <input role="switch" type="checkbox" />
+                    </label>
+                </fieldset>
+            </div>
+        </div>
+
+    </main>
 
     <script src="/js/index.js"></script>
     <script src="/js/calendar.js"></script>
