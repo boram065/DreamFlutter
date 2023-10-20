@@ -51,40 +51,51 @@ emojiItems.forEach(item => {
     });
 });
 
+// const btnUpload = document.getElementsByClassName("upload");
+// btnUpload.addEventListener('click', function() {
+//     window.location.href="index.html";
+//     /* calendar.js 에서 클릭한 날짜를 가져오기 */
+//     /* 업로드 버튼을 누르면 index.html에 가져온 날짜 배경화면을 흰색으로 바꾸기 */
+// });
+
 document.addEventListener("DOMContentLoaded", function() {
-    const dataItems = document.querySelectorAll(".date.item");
+    const selectedDate = localStorage.getItem("selectedDate");
+    
+    if (selectedDate) {
+        const dataItems = document.querySelectorAll(".date.item");
     let selectedDates = JSON.parse(localStorage.getItem("selectedDates")) || [];
 
     // 초기에 선택한 날짜에 스타일을 적용
-    dataItems.forEach(item => {
-        const date = parseInt(item.innerHTML);
-        if (selectedDates.includes(date)) {
-            console.log(item);
-            item.style.color = "#000000";
-        }
-    });
-
-    // 업로드 버튼 클릭 이벤트 처리
+        dataItems.forEach(item => {
+            item.style.backgroundColor = "white";
+            item.style.borderRadius = "10px";
+        });
+    }
     const backButton = document.querySelector(".upload");
     backButton.addEventListener("click", function() {
-        dataItems.forEach(item => {
-            const date = parseInt(item.innerHTML);
-
-            item.addEventListener("click", function() {
-                // 현재 클릭한 날짜 스타일 적용
-                item.style.backgroundColor = "white";
-                item.style.borderRadius = "20px";
-
-                // 선택한 날짜 배열에 추가
-                if (!selectedDates.includes(date)) {
-                    selectedDates.push(date);
-                }
-
-                // 선택한 날짜 목록을 로컬 스토리지에 저장
-                localStorage.setItem("selectedDates", JSON.stringify(selectedDates));
-            });
-        });
-
-        window.location.href = "index.html"; // index.html로 이동
+        localStorage.removeItem("selectedDate"); // 이전에 선택한 날짜 삭제
+        window.location.href = "index2.html"; // index.html로 이동
     });
+});
+
+// 꿈일기 입력 요소를 선택합니다.
+const dreamBox = document.getElementById('dream-box');
+const uploadButton = document.querySelector('.upload');
+
+// 로컬 스토리지에서 데이터를 불러와 꿈일기 입력 요소에 설정합니다.
+if (localStorage.getItem('dream')) {
+    dreamBox.value = localStorage.getItem('dream');
+}
+
+// 입력된 꿈일기를 로컬 스토리지에 저장하는 함수
+function saveDreamToLocalStorage() {
+    const dreamText = dreamBox.value;
+    localStorage.setItem('dream', dreamText);
+}
+
+// "일기 업로드" 버튼에 대한 클릭 이벤트 리스너를 추가합니다.
+uploadButton.addEventListener('click', function() {
+    // 입력된 꿈일기를 로컬 스토리지에 저장합니다.
+    saveDreamToLocalStorage();
+    // alert('일기가 업로드되었습니다.'); // 업로드 완료 메시지를 띄울 수 있습니다.
 });
