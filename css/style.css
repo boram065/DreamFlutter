@@ -1,3 +1,24 @@
 body {
     background-color: #0D1013;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+*{
+  font-family: 'Pretendard-Regular';
+}
+
+
+:root{
+    --background-color: #0D1013;
+    --main-color: #665BD1;
+    --box-color: #25262E;
 }
