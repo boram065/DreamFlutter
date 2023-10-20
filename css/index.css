@@ -176,3 +176,8 @@ label {
     background-color: var(--main-color);
     left: 2.3rem;
 }
+
+.selected-date {
+    background-color: white;
+    border-radius: 20px;
+}

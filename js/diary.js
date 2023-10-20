@@ -51,26 +51,40 @@ emojiItems.forEach(item => {
     });
 });
 
-// const btnUpload = document.getElementsByClassName("upload");
-// btnUpload.addEventListener('click', function() {
-//     window.location.href="index.html";
-//     /* calendar.js 에서 클릭한 날짜를 가져오기 */
-//     /* 업로드 버튼을 누르면 index.html에 가져온 날짜 배경화면을 흰색으로 바꾸기 */
-// });
-
 document.addEventListener("DOMContentLoaded", function() {
-    const selectedDate = localStorage.getItem("selectedDate");
-    
-    if (selectedDate) {
-        const dataItems = document.querySelectorAll(".date.item");
-        dataItems.forEach(item => {
-            item.style.backgroundColor = "white";
-            item.style.borderRadius = "10px";
-        });
-    }
+    const dataItems = document.querySelectorAll(".date.item");
+    let selectedDates = JSON.parse(localStorage.getItem("selectedDates")) || [];
+
+    // 초기에 선택한 날짜에 스타일을 적용
+    dataItems.forEach(item => {
+        const date = parseInt(item.innerHTML);
+        if (selectedDates.includes(date)) {
+            console.log(item);
+            item.style.color = "#000000";
+        }
+    });
+
+    // 업로드 버튼 클릭 이벤트 처리
     const backButton = document.querySelector(".upload");
     backButton.addEventListener("click", function() {
-        localStorage.removeItem("selectedDate"); // 이전에 선택한 날짜 삭제
+        dataItems.forEach(item => {
+            const date = parseInt(item.innerHTML);
+
+            item.addEventListener("click", function() {
+                // 현재 클릭한 날짜 스타일 적용
+                item.style.backgroundColor = "white";
+                item.style.borderRadius = "20px";
+
+                // 선택한 날짜 배열에 추가
+                if (!selectedDates.includes(date)) {
+                    selectedDates.push(date);
+                }
+
+                // 선택한 날짜 목록을 로컬 스토리지에 저장
+                localStorage.setItem("selectedDates", JSON.stringify(selectedDates));
+            });
+        });
+
         window.location.href = "index.html"; // index.html로 이동
     });
 });
