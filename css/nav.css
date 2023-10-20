@@ -7,22 +7,21 @@ header {
 }
 
 .nav-logo{
-    background-image: url(../images/logo.png);
+    background-image: url(../images/nav-logo.png);
     width: 12vw;
     height: 7vh;
     background-size: cover;
     margin-top: 10px;
 }
-.nav {
-    height: 60px;
-    background-color: #0D1013;
-    color: #fff;
-    padding: 20px 10px;
+.nav-style{
+    display: flex;
+    align-items: center;
+    width: 50vw;
+    justify-content: space-between;
 }
-
 .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
