@@ -1,0 +1,95 @@
+.song {
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.song p:first-child {
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5px;
+}
+
+.emoji {
+    margin-top: 20px;
+}
+
+.btnSong {
+    display: flex;
+    column-gap: 10px;
+    margin-top: 10px;
+    width: 85vw;
+    height: 9vh;
+    border-radius: 10px;
+    background-color: #25262E;
+    border: 0;
+    cursor: pointer;
+}
+
+.inside {
+    display: flex;
+    column-gap: 20px;
+    margin: 10px;
+}
+
+.songImg img {
+    width: 13vw;
+    height: 6vh;
+    border-radius: 10px;
+}
+
+.content  {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 7px;
+    margin-top: 7px;
+}
+
+.btn h5 {
+    margin: 0;
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+.btn p {
+    margin: 0;
+    color: #fff;
+    opacity: 0.6;
+}
+
+.alram {
+    display: flex;
+    width: 85vw;
+    height: 30vh;
+    margin-top: 50px;
+    border-radius: 20px;
+    background-color: #25262E;
+    border: 0;
+    padding: 5px;
+}
+
+.alramTitle {
+    display: flex;
+}
+
+.alram h4 {
+    color: white;
+    font-size: 1.1rem;
+    margin: 20px;
+}
+
+.plus {
+    display: flex;
+    margin-left: auto;
+    margin-left: 170px;
+    margin-top: 3px;
+}
+
+.plus i {
+    color: #665BD1;
+    font-size: 2.5rem;
+}
