@@ -189,6 +189,7 @@ label {
     column-gap: 20px;
     align-items: center;
     font-size: 1.2rem;
+    height: 40px;
   }
   #after{
     height: 40px;
