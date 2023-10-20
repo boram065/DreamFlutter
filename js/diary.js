@@ -50,3 +50,27 @@ emojiItems.forEach(item => {
         checkSelectionAndClosePopup();
     });
 });
+
+// const btnUpload = document.getElementsByClassName("upload");
+// btnUpload.addEventListener('click', function() {
+//     window.location.href="index.html";
+//     /* calendar.js 에서 클릭한 날짜를 가져오기 */
+//     /* 업로드 버튼을 누르면 index.html에 가져온 날짜 배경화면을 흰색으로 바꾸기 */
+// });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const selectedDate = localStorage.getItem("selectedDate");
+    
+    if (selectedDate) {
+        const dataItems = document.querySelectorAll(".date.item");
+        dataItems.forEach(item => {
+            item.style.backgroundColor = "white";
+            item.style.borderRadius = "10px";
+        });
+    }
+    const backButton = document.querySelector(".upload");
+    backButton.addEventListener("click", function() {
+        localStorage.removeItem("selectedDate"); // 이전에 선택한 날짜 삭제
+        window.location.href = "index.html"; // index.html로 이동
+    });
+});

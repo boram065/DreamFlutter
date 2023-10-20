@@ -20,6 +20,10 @@ const setCalendar = (year, month) => {
         dateItemDiv.classList.add("previous-month");
         dateItemDiv.innerHTML = lastMonthLastDate - i;
 
+        dateItemDiv.addEventListener("click", function() {
+            console.log(`클릭한 날짜: ${year}-${month - 1}-${lastMonthLastDate - i}`);
+            window.location.href = "diary.html";
+        });
         datesContainerDiv.appendChild(dateItemDiv);
     }
 
@@ -30,6 +34,10 @@ const setCalendar = (year, month) => {
         dateItemDiv.classList.add("item");
         dateItemDiv.innerHTML = date;
 
+        dateItemDiv.addEventListener("click", function() {
+            console.log(`클릭한 날짜: ${year}-${month}-${date}`);
+            window.location.href = "diary.html";
+        });
         datesContainerDiv.appendChild(dateItemDiv);
     }
 
@@ -40,8 +48,12 @@ const setCalendar = (year, month) => {
         dateItemDiv.classList.add("date");
         dateItemDiv.classList.add("item");
         dateItemDiv.classList.add("next-month");
-        dateItemDiv.innerHTML = i   ;
+        dateItemDiv.innerHTML = i;
 
+        dateItemDiv.addEventListener("click", function() {
+            console.log(`클릭한 날짜: ${year}-${month + 1}-${i}`);
+            window.location.href = "diary.html";
+        });
         datesContainerDiv.appendChild(dateItemDiv);
     }
 }
@@ -67,4 +79,14 @@ rightDiv.onclick = () => {
     setCalendar(year, month);
 }
 
-// 해당 월의 마자막 요일
+document.addEventListener("DOMContentLoaded", function() {
+    const dataItems = document.querySelectorAll(".date.item");
+    
+    dataItems.forEach(item => {
+        item.addEventListener("click", function() {
+            const date = parseInt(item.innerHTML);
+            localStorage.setItem("selectedDate", date);
+            window.location.href = "diary.html";
+        });
+    });
+});
