@@ -3,9 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>꿈틀이</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/calendar.css">
 </head>
 <body>
-    
+    <header>
+        <nav class="nav container">
+            <!-- logo -->
+            <!-- logo 이미지 추가 -->
+            <!-- <a href="" class="nav-logo"></a> -->
+
+            <!-- 햄버거 메뉴바 -->
+            <div class="nav-toggle" id="nav_toggle">
+                <i class="bi bi-list"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="calendar">
+            <div class="title flex-container">
+                <div class="left">
+                    <i class="bi bi-chevron-left"></i>
+                </div>
+                <div class="month"></div>
+                <div class="right">
+                    <i class="bi bi-chevron-right"></i>
+                </div>
+            </div>
+
+            <div class="weekday container">
+                <div class="weekday item">S</div>
+                <div class="weekday item">M</div>
+                <div class="weekday item">T</div>
+                <div class="weekday item">W</div>
+                <div class="weekday item">T</div>
+                <div class="weekday item">F</div>
+                <div class="weekday item">S</div>
+            </div>
+
+            <hr>
+
+            <div class="dates container"></div>
+        </div>
+    </main>
+
+    <!-- 수면에 도움이 되는 노래 추천 버튼을 누를 시 유튜브 링크로 이동 -->
+
+    <script src="/js/index.js"></script>
+    <script src="/js/calendar.js"></script>
 </body>
 </html>
