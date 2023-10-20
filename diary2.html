@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>꿈틀이</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/diary.css">
+    <link rel="stylesheet" href="./css/nav.css">
+</head>
+<body>
+    <header>
+        <nav class="nav container">
+            <!-- logo -->
+            <!-- logo 이미지 추가 -->
+            <!-- <a href="./images/logo.png" class="nav-logo"></a> -->
+
+            <!-- 이전 버튼 -->
+            <div class="nav-style">
+                <div class="nav-toggle">
+                    <div class="pre" onclick="">
+                        <i class="bi bi-chevron-left"></i>
+                    </div>
+                </div>
+                <div class="nav-logo"></div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="diary-container" style="height: 70vh; margin-top:10%">
+        <div class="emoji">
+        </div>
+        <hr>
+        <textarea name="dream-box" id="dream-box" cols="30" rows="10" placeholder="나의 꿈일기를 작성하세요"></textarea>
+    </div>
+    <script src="./js/diary.js"></script>
+</body>
+</html>

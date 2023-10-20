@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>꿈틀이</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/calendar.css">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <header>
+        <nav class="nav container" style="justify-content: center; background-color: var(--background-color);">
+            <!-- logo -->
+            <!-- logo 이미지 추가 -->
+            <!-- <a href="./images/logo.png" class="nav-logo"></a> -->
+            <div class="nav-logo"></div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="calendar">
+            <div class="title flex-container">
+                <div class="top">
+                    <div class="left">
+                        <i class="bi bi-chevron-left"></i>
+                    </div>
+                    <div class="month"></div>
+                    <div class="right">
+                        <i class="bi bi-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="weekday container">
+                <div class="weekday item">S</div>
+                <div class="weekday item">M</div>
+                <div class="weekday item">T</div>
+                <div class="weekday item">W</div>
+                <div class="weekday item">T</div>
+                <div class="weekday item">F</div>
+                <div class="weekday item">S</div>
+            </div>
+
+            <hr>
+
+            <div class="dates container"></div>
+        </div>
+
+        <div class="song">
+            <div class="title">
+                <p>
+                    오늘의 수면제
+                    <div class="emoji">
+                        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Sleeping%20Face.png" alt="Sleeping Face" width="25" height="25" />
+                    </div>
+                </p>
+            </div>
+
+            <!-- 수면에 도움이 되는 노래 추천 버튼을 누를 시 유튜브 링크로 이동 -->
+            <div class="btn">
+                <button class="btnSong" onclick="">
+                    <div class="inside">
+                        <div class="songImg">
+                            <img src="/images/calendarImg.jpg">
+                        </div>
+
+                        <div class="content">
+                            <h5>누군가의 마음이 되면</h5>
+                            <p>예빛</p>
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <div class="alramContainer">
+            <div class="alram">
+                <div class="alramTitle">
+                    <h4>수면 알람</h4>
+                    <div class="plus">
+                        <i class="bi bi-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="time">
+                <div class="control">
+                    <h3></h3>
+                </div>
+
+                <fieldset>
+                    <label>
+                        <input role="switch" type="checkbox" />
+                    </label>
+                </fieldset>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="/js/calenndar2.js"></script>
+</body>
+</html>
