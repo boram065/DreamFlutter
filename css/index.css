@@ -1,3 +1,8 @@
+:root {
+    --main-color: #665BD1;
+    --first-color: #25262E;
+}
+
 .song {
     margin-top: 30px;
     margin-left: 20px;
@@ -21,10 +26,11 @@
     display: flex;
     column-gap: 10px;
     margin-top: 10px;
-    width: 85vw;
+    margin-left: 5px;
+    width: 86vw;
     height: 9vh;
     border-radius: 10px;
-    background-color: #25262E;
+    background-color: var(--first-color);
     border: 0;
     cursor: pointer;
 }
@@ -61,23 +67,29 @@
     opacity: 0.6;
 }
 
+.alramContainer {
+    display: flex;
+    margin-bottom: 50px;
+}
+
 .alram {
     display: flex;
     width: 85vw;
     height: 30vh;
     margin-top: 50px;
     border-radius: 20px;
-    background-color: #25262E;
+    background-color: var(--first-color);
     border: 0;
     padding: 5px;
 }
 
 .alramTitle {
     display: flex;
+    height: 5vh;
 }
 
 .alram h4 {
-    color: white;
+    color: #fff;
     font-size: 1.1rem;
     margin: 20px;
 }
@@ -85,11 +97,77 @@
 .plus {
     display: flex;
     margin-left: auto;
-    margin-left: 170px;
-    margin-top: 3px;
+    margin-left: 175px;
+    margin-top: 10px;
 }
 
 .plus i {
-    color: #665BD1;
-    font-size: 2.5rem;
+    color: var(--main-color);
+    font-size: 2rem;
+    margin-left: 14px;
+}
+
+.alramContainer {
+    margin-left: 20px;
+    position: relative;
+}
+
+.time {
+    display: flex;
+    position: absolute;
+    top: 35%;
+    margin-left: 30px;
+    width: 75vw;
+    justify-content: space-between;
+}
+.control{
+    width: fit-content;
+}
+
+.control h3 {
+    color: #fff;
+    font-size: 1.7rem;
+    margin-top: 10px;
+}
+
+fieldset {
+    border: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+[type="checkbox"] {
+    appearance: none;
+    position: relative;
+    background-color: white;
+    border-radius: 20px;
+    width: 18vw;
+    height: 4vh;
+}
+
+[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 9vw;
+    height: 4vh;
+    border-radius: 50%;
+    transform: scale(0.8);
+    background-color: var(--main-color);
+    transition: left 250ms linear;
+}
+
+[type="checkbox"]:checked {
+    background-color: black;
+}
+
+[type="checkbox"]:checked::before {
+    background-color: var(--main-color);
+    left: 2.3rem;
 }
