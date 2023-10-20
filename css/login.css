@@ -57,3 +57,13 @@ input::placeholder{
     font-size: 16px;
     margin-bottom: 25%;
 }
+
+.gogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    top: 0;
+    margin-top: -10px;
+    text-decoration: underline;
+}

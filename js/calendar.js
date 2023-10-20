@@ -19,10 +19,8 @@ const setCalendar = (year, month) => {
         dateItemDiv.classList.add("item");
         dateItemDiv.classList.add("previous-month");
         dateItemDiv.innerHTML = lastMonthLastDate - i;
-
         dateItemDiv.addEventListener("click", function() {
-            console.log(`클릭한 날짜: ${year}-${month - 1}-${lastMonthLastDate - i}`);
-            window.location.href = "diary.html";
+            window.location.href="diary.html";
         });
         datesContainerDiv.appendChild(dateItemDiv);
     }
@@ -33,10 +31,8 @@ const setCalendar = (year, month) => {
         dateItemDiv.classList.add("date");
         dateItemDiv.classList.add("item");
         dateItemDiv.innerHTML = date;
-
         dateItemDiv.addEventListener("click", function() {
-            console.log(`클릭한 날짜: ${year}-${month}-${date}`);
-            window.location.href = "diary.html";
+            window.location.href="diary.html";
         });
         datesContainerDiv.appendChild(dateItemDiv);
     }
@@ -49,10 +45,8 @@ const setCalendar = (year, month) => {
         dateItemDiv.classList.add("item");
         dateItemDiv.classList.add("next-month");
         dateItemDiv.innerHTML = i;
-
         dateItemDiv.addEventListener("click", function() {
-            console.log(`클릭한 날짜: ${year}-${month + 1}-${i}`);
-            window.location.href = "diary.html";
+            window.location.href="diary.html";
         });
         datesContainerDiv.appendChild(dateItemDiv);
     }
@@ -81,11 +75,23 @@ rightDiv.onclick = () => {
 
 document.addEventListener("DOMContentLoaded", function() {
     const dataItems = document.querySelectorAll(".date.item");
-    
+
+    // 로컬 스토리지에서 "selectedDates" 데이터를 불러오기
+    let selectedDates = JSON.parse(localStorage.getItem("selectedDates")) || [];
+
     dataItems.forEach(item => {
-        item.addEventListener("click", function() {
-            const date = parseInt(item.innerHTML);
-            localStorage.setItem("selectedDate", date);
+        item.addEventListener("click", function(event) {
+            const clickedDate = parseInt(item.textContent);
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = now.getMonth() + 1;
+            const selectedDate = `${year}.${month}.${clickedDate}`;
+
+            // 새로운 선택한 날짜를 배열에 추가 (기존 데이터 유지)
+            selectedDates.push(selectedDate);
+
+            // 선택한 날짜 목록을 로컬 스토리지에 저장
+            localStorage.setItem("selectedDates", JSON.stringify(selectedDates));
             window.location.href = "diary.html";
         });
     });
