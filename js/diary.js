@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const backButton = document.querySelector(".upload");
     backButton.addEventListener("click", function() {
         localStorage.removeItem("selectedDate"); // 이전에 선택한 날짜 삭제
-        window.location.href = "index2.html"; // index.html로 이동
+        window.location.href = "index..html"; // index.html로 이동
     });
 });
 

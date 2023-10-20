@@ -22,7 +22,7 @@ const setCalendar = (year, month) => {
 
         dateItemDiv.addEventListener("click", function() {
             console.log(`클릭한 날짜: ${year}-${month - 1}-${lastMonthLastDate - i}`);
-            window.location.href = "diary2.html";
+            window.location.href = "diary..html";
         });
         datesContainerDiv.appendChild(dateItemDiv);
     }
@@ -36,7 +36,7 @@ const setCalendar = (year, month) => {
 
         dateItemDiv.addEventListener("click", function() {
             console.log(`클릭한 날짜: ${year}-${month}-${date}`);
-            window.location.href = "diary2.html";
+            window.location.href = "diary..html";
         });
         datesContainerDiv.appendChild(dateItemDiv);
     }
@@ -52,7 +52,7 @@ const setCalendar = (year, month) => {
 
         dateItemDiv.addEventListener("click", function() {
             console.log(`클릭한 날짜: ${year}-${month + 1}-${i}`);
-            window.location.href = "diary2.html";
+            window.location.href = "diary..html";
         });
         datesContainerDiv.appendChild(dateItemDiv);
     }
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
         item.addEventListener("click", function() {
             const date = parseInt(item.innerHTML);
             localStorage.setItem("genre", date);
-            window.location.href = "diary2.html";
+            window.location.href = "diary..html";
         });
     });
 });
@@ -97,9 +97,9 @@ document.addEventListener("DOMContentLoaded", function() {
 //     item.addEventListener("click", function() {
 //         clickCount++; // 클릭할 때마다 횟수 증가
 
-//         // 두 번째로 눌렸을 때 diary2.html로 이동
+//         // 두 번째로 눌렸을 때 diary..html로 이동
 //         if (clickCount === 2) {
-//             window.location.href = "diary2.html";
+//             window.location.href = "diary..html";
 //         } else {
 //             // 아직 두 번째로 누르지 않은 경우 diary.html로 이동
 //             const date = parseInt(item.innerHTML);
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // 요소를 선택합니다.
 // const dateElement = document.querySelector('.date.item');
 
-// // .date.item을 클릭했을 때 diary2.html 페이지로 이동합니다.
+// // .date.item을 클릭했을 때 diary..html 페이지로 이동합니다.
 // dateElement.addEventListener('click', function() {
 //     // "genre" 키값을 로컬 스토리지에 저장합니다.
 //     localStorage.setItem('genre', '4');
@@ -123,8 +123,8 @@ document.addEventListener("DOMContentLoaded", function() {
 //     // 저장된 "genre" 값을 콘솔에 출력하여 확인합니다.
 //     console.log(localStorage.getItem('genre'));
 
-//     // diary2.html 페이지로 이동합니다.
-//     window.location.href = 'diary2.html';
+//     // diary..html 페이지로 이동합니다.
+//     window.location.href = 'diary..html';
 // });
 // // 로컬 스토리지에서 "genre" 키값을 가져옵니다.
 // const genreValue = localStorage.getItem('genre');
@@ -133,14 +133,14 @@ document.addEventListener("DOMContentLoaded", function() {
 // // 요소를 선택합니다.
 // const dateElement = document.querySelector('.date.item');
 
-// // .date.item을 클릭했을 때 diary2.html 페이지로 이동합니다.
+// // .date.item을 클릭했을 때 diary..html 페이지로 이동합니다.
 // dateElement.addEventListener('click', function() {
-//     // "genre" 키값이 이미 존재한다면 diary2.html 페이지로 이동합니다.
+//     // "genre" 키값이 이미 존재한다면 diary..html 페이지로 이동합니다.
 //     if (genreValue !== null) {
-//         window.location.href = 'diary2.html';
+//         window.location.href = 'diary..html';
 //     } else {
-//         // "genre" 키값을 저장하고 diary2.html 페이지로 이동합니다.
+//         // "genre" 키값을 저장하고 diary..html 페이지로 이동합니다.
 //         localStorage.setItem('genre', 'value');
-//         window.location.href = 'diary2.html';
+//         window.location.href = 'diary..html';
 //     }
 // });
