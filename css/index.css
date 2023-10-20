@@ -85,24 +85,30 @@
 .alramTitle {
     display: flex;
     height: 5vh;
+    justify-content: space-between;
+    width: 76vw;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 23px;
 }
 
 .alram h4 {
     color: #fff;
     font-size: 1.1rem;
-    margin: 20px;
+    /* margin: 20px; */
 }
 
 .plus {
     display: flex;
     margin-left: auto;
-    margin-left: 175px;
-    margin-top: 10px;
+    /* margin-left: 175px; */
+    /* margin-top: 10px; */
+    font-size: 1rem;
 }
 
 .plus i {
     color: var(--main-color);
-    font-size: 2rem;
+    font-size: 1rem;
     margin-left: 14px;
 }
 
