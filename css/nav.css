@@ -18,12 +18,11 @@ header {
     background-color: #0D1013;
     color: #fff;
     padding: 20px 10px;
-    width: 50vw;
 }
 
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
