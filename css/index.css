@@ -181,3 +181,37 @@ label {
     background-color: white;
     border-radius: 20px;
 }
+
+
+.control{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-bottom: 10px;
+}
+
+.control .after {
+    color: #fff;
+    font-size: 1rem;
+}
+.control p {
+    color: #fff;
+    font-size: 2rem;
+    /* margin-top: 10px; */
+}
+.btn-position{
+    position: absolute;
+    right: 0;
+    top: 20%;
+}
+
+.time {
+    display: flex;
+    position: absolute;
+    top: 30%;
+    /* left: 13%; */
+    width: 78vw;
+    justify-content: space-between;
+    align-items: center;
+}
